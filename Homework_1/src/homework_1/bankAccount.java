@@ -17,7 +17,7 @@ public class bankAccount {
 //------------------------------
     public bankAccount(){
         name="Roberto";
-        accid=01000001;
+        accid=252015;
         balance=26;
         username="riverto";
     }
