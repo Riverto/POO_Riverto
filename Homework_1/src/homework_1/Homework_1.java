@@ -16,6 +16,17 @@ public class Homework_1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    }
-    
+        account myaccount = new account();
+        account myotheraccount = new account(10.0,"252015");
+        System.out.println("balance = $"+myaccount.getBalance());
+        System.out.println("number = "+myaccount.getNumber());
+        System.out.println("balance = $"+myotheraccount.getBalance());
+        System.out.println("number = "+myotheraccount.getNumber());
+        myotheraccount.deposit(50);
+        System.out.println("balance = $"+myotheraccount.getBalance());
+        myaccount.withdrawal(15);
+        myotheraccount.withdrawal(40);
+        System.out.println("My account balance = $"+myaccount.getBalance());
+        System.out.println("My other account balance = $"+myotheraccount.getBalance());   
+    }    
 }

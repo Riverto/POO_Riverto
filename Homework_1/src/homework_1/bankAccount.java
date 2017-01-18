@@ -77,7 +77,7 @@ public class bankAccount {
     public void withdraw(double amount){
         double currentBal=obtainBalance();
         if(setBalance(currentBal-amount)){
-            System.out.print("Withdraw was successful");
+            System.out.print("Withdrawal was successful");
         } else System.out.print("Input was invalid");
     }
 }
