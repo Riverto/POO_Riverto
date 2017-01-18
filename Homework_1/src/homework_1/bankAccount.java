@@ -63,9 +63,17 @@ public class bankAccount {
         return username;
     }
     public boolean setUsername(String username){
-        if((name!=null)&&(!"".equals(username))){
-           this.username=username;
-           return true;
-        } else return false;
+        if((name!=null)&&(!"".equals(username))){//Checks for a valid input
+           this.username=username;// If input is valid
+           return true;//a true value is returned
+        } else return false;//if the input is invalid a false value is return
+    }
+    public void deposit(double amount){
+        double currentBal=obtainBalance();
+        setBalance(currentBal+amount);//assumes amount is already checked to be a positive number
+    }
+    public void withdraw(double amount){
+        double currentBal=obtainBalance();
+        setBalance(currentBal-amount);//assumes amount is already checked to be a positive number
     }
 }
