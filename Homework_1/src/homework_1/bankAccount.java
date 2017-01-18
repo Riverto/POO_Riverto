@@ -70,10 +70,14 @@ public class bankAccount {
     }
     public void deposit(double amount){
         double currentBal=obtainBalance();
-        setBalance(currentBal+amount);//assumes amount is already checked to be a positive number
+        if(setBalance(currentBal+amount)){
+            System.out.print("Deposit was successful");
+        } else System.out.print("Input was invalid.");
     }
     public void withdraw(double amount){
         double currentBal=obtainBalance();
-        setBalance(currentBal-amount);//assumes amount is already checked to be a positive number
+        if(setBalance(currentBal-amount)){
+            System.out.print("Withdraw was successful");
+        } else System.out.print("Input was invalid");
     }
 }
