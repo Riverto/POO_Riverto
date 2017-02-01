@@ -40,8 +40,9 @@ public class Employee {
     public int getAnnualSalary(){
         return this.salary*12;
     }
-    public int raiseSalary(int percent){
-        return this.salary+=salary*percent;
+    public int raiseSalary(int percent){//receives the percent as an int, therefore 100% = 100
+        this.salary+=salary*percent/100;
+        return this.salary;
     }
     @Override
     public String toString(){
