@@ -44,7 +44,7 @@ public class Account {
     public int transferTo(Account another,int amount){
         if (amount<=this.balance){
             another.credit(amount);
-            debit(amount);
+            this.balance-=amount;
         } else System.out.println("Amount Exceeded Balance");
         System.out.println(getName()+":"+this.balance +"\n" +another.getName()+":"+ another.balance);
         return this.balance;
