@@ -16,7 +16,9 @@ public class FirstPartialExercises {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-
+        Account diana = new Account("1", "diana", 50000);
+        Account Angel = new Account("2", "angel", 6000);
+        diana.transferTo(Angel, 6000);
     }
     
 }

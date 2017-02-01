@@ -36,5 +36,11 @@ public class InvoiceItem {
     public void setUnitPrice(double unitPrice){
         this.unitPrice=unitPrice;
     }
-    
+    public double getTotal(){
+        return this.qty*this.unitPrice;
+    }
+    @Override
+    public String toString(){
+        return "InvoiceItem[id="+this.id+", desc="+this.desc+", qty="+this.qty+", unitPrice="+this.unitPrice+"]";
+    }
 }
