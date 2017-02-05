@@ -44,7 +44,7 @@ public class Time {
         return String.format("%02d", this.hour)+":"+String.format("%02d", this.minute)+":"+String.format("%02d", this.second);
     }
     public Time nextSecond(){
-        Time temp = new Time(this.hour, this.minute, this.second);
+        Time temp = new Time(this.hour, this.minute, this.second); //crea un Objeto Time temporal para no modificar el valor de el objeto original
         if(temp.second+1==60){
             temp.second=0;
             if(temp.minute+1==60){
@@ -54,10 +54,10 @@ public class Time {
                 }else ++temp.hour;
             } else ++temp.minute;
         } else ++temp.second;
-        return temp;
+        return temp; //regresa el objeto temporal
     }
     public Time previousSecond(){
-        Time temp = new Time(this.hour, this.minute, this.second);
+        Time temp = new Time(this.hour, this.minute, this.second); //crea un Objeto Time temporal para no modificar el valor de el objeto original
         if(temp.second-1<00){
             temp.second=59;
             if(temp.minute-1<00){
@@ -67,6 +67,6 @@ public class Time {
                 }else --temp.hour;
             } else --temp.minute;
         } else --temp.second;
-        return temp;
+        return temp; //regresa el objeto temporal
     }
 }
