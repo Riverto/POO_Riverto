@@ -41,7 +41,7 @@ public class Time {
     }
     @Override
     public String toString(){
-        return String.format("%02d", this.hour)+"/"+String.format("%02d", this.minute)+"/"+String.format("%02d", this.second);
+        return String.format("%02d", this.hour)+":"+String.format("%02d", this.minute)+":"+String.format("%02d", this.second);
     }
     public Time nextSecond(){
         if(this.getSecond()+1==60){
@@ -56,12 +56,12 @@ public class Time {
         return this;
     }
     public Time previousSecond(){
-        if(this.getSecond()-1<=00){
-            this.setSecond(60);
-            if(this.getMinute()-1<=00){
-                this.setMinute(60);
-                if(this.getHour()-1<=00){
-                    this.setHour(24);
+        if(this.getSecond()-1<00){
+            this.setSecond(59);
+            if(this.getMinute()-1<00){
+                this.setMinute(59);
+                if(this.getHour()-1<00){
+                    this.setHour(23);
                 }else this.setHour(this.getHour()-1);
             } else this.setMinute(this.getMinute()-1);
         } else this.setSecond(this.getSecond()-1);
