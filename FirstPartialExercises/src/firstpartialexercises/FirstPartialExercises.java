@@ -16,6 +16,9 @@ public class FirstPartialExercises {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Author test2 = new Author("name", "email", 'x');
+        Book1 test = new Book1("test", test2, 1);
+        System.out.println(test.toString());
     }
     
 }
