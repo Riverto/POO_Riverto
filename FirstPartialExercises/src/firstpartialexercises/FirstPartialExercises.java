@@ -15,6 +15,10 @@ public class FirstPartialExercises {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        MyRectangle test = new MyRectangle(2,1,1,2);
+        System.out.println(test.getA());
+        System.out.println(test.getB());
+        System.out.println(test);
+        System.out.println(test.getArea());
     }
 }

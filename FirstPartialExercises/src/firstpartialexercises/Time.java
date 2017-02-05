@@ -44,27 +44,27 @@ public class Time {
         return String.format("%02d", this.hour)+":"+String.format("%02d", this.minute)+":"+String.format("%02d", this.second);
     }
     public Time nextSecond(){
-        if(this.getSecond()+1==60){
-            this.setSecond(0);
-            if(this.getMinute()+1==60){
-                this.setMinute(0);
-                if(this.getHour()+1==24){
-                    this.setHour(0);
-                }else this.setHour(this.getHour()+1);
-            } else this.setMinute(this.getMinute()+1);
-        } else this.setSecond(this.getSecond()+1);
+        if(second+1==60){
+            second=0;
+            if(minute+1==60){
+                minute=0;
+                if(hour+1==24){
+                    hour=0;
+                }else ++hour;
+            } else ++minute;
+        } else ++second;
         return this;
     }
     public Time previousSecond(){
-        if(this.getSecond()-1<00){
-            this.setSecond(59);
-            if(this.getMinute()-1<00){
-                this.setMinute(59);
-                if(this.getHour()-1<00){
-                    this.setHour(23);
-                }else this.setHour(this.getHour()-1);
-            } else this.setMinute(this.getMinute()-1);
-        } else this.setSecond(this.getSecond()-1);
+        if(second-1<00){
+            second=59;
+            if(minute-1<00){
+                minute=59;
+                if(hour-1<00){
+                    hour=23;
+                }else --hour;
+            } else --minute;
+        } else --second;
         return this;
     }
 }
