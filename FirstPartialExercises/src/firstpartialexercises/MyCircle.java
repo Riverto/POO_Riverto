@@ -14,8 +14,7 @@ public class MyCircle {
     private int radius;
     
     public MyCircle(){
-        MyPoint center = new MyPoint(0, 0);
-        this.center=center;
+        this.center = new MyPoint(0, 0);
         this.radius=1;
     }
     public MyCircle(int x, int y, int radius){

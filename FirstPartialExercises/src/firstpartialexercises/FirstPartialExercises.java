@@ -20,6 +20,7 @@ public class FirstPartialExercises {
         System.out.println(test.getB());
         System.out.println(test);
         System.out.println(test.getArea());
+        System.out.println(test.getPerimeter());
         MyPoint a = new MyPoint(3,0);
         MyPoint b = new MyPoint(0,3);
         MyRectangle test2 = new MyRectangle(a,b);
@@ -27,5 +28,6 @@ public class FirstPartialExercises {
         System.out.println(test2.getB());
         System.out.println(test2);
         System.out.println(test2.getArea());
+        System.out.println(test2.getPerimeter());
     }
 }
