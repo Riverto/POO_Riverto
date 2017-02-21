@@ -45,15 +45,18 @@ public class Student {
         return false;
     }
     public String getSports() {
-        String list=toString()+", Sports=";
+        String list="Sports=";
         for (Sports temp : this.sports) {
             list+=temp.getName()+",";
         }
         list=list.substring(0, list.length()-1);
         return list;
     }
+    public String getStudent(){
+        return "Name="+this.name+", Id="+this.id;
+    }
     @Override
     public String toString(){
-        return "Name="+this.name+", Id="+this.id;
+        return "Name="+this.name+", Id="+this.id+", "+getSports();
     }
 }
