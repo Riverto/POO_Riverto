@@ -11,15 +11,15 @@ import java.util.*;
  * @author Riverto
  */
 public class Team {
-    private char name;
+    private String name;
     private ArrayList<Student> students;
     private ArrayList<Event> events;
-    public Team(char Name){
+    public Team(String Name){
         this.name = name;
         this.students = new ArrayList();
     }
-    public char getName() {
-        return name;
+    public String getName() {
+        return this.name;
     }
     public boolean addStudent(Student student){
         for(Student temp : this.students) {
@@ -40,14 +40,14 @@ public class Team {
         return true;
     }
     public String getStudents(){
-        String list="Students=";
+        String list="Students={\n";
         for (Student temp : this.students) {
-            list+=temp.getStudent()+"\n";
+            list+="\t"+temp.getStudent()+"\n";
         }
         return list;
     }
     @Override
     public String toString(){
-        return "Team="+this.name+", Students={";
+        return "Team="+this.getName()+","+this.getStudents()+"}";
     }
 }

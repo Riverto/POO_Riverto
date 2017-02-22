@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Event {
     private String name;
-    private ArrayList<Student> students;
+    private ArrayList<Team> teams;
     
     public Event(String name){
         this.name=name;
@@ -22,14 +22,14 @@ public class Event {
     public String getName() {
         return name;
     }
-    public boolean addStudent(Student student){
-        for(Student temp : this.students) {
-            if(temp.getName().equalsIgnoreCase(student.getName())){
+    public boolean addTeam(Team team){
+        for(Team temp : this.teams) {
+            if(temp.getName().equalsIgnoreCase(team.getName())){
                 return false;
             }
         }
-        this.students.add(student);
-        student.addEvent(this);
+        this.teams.add(team);
+        team.addEvent(this);
         return true;
     }
     public boolean removeStudent(Student student){
