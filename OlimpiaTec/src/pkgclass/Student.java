@@ -36,14 +36,6 @@ public class Student {
         this.events.add(event);
         return true;
     }
-    public boolean removeSport(Event sport){
-        for(Event temp : this.events) {
-            if(temp.getName().equalsIgnoreCase(sport.getName())){
-                this.events.remove(temp);
-            }
-        }
-        return false;
-    }
     public String getEvents() {
         String list="Events=";
         for (Event temp : this.events) {
