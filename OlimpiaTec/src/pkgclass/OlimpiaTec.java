@@ -30,7 +30,7 @@ public class OlimpiaTec {
         System.out.println(soccer);
         basketball.addStudent(rodrigo);
         System.out.println(rodrigo);
-        System.out.println(rodrigo.getSports());
-        System.out.println(esteban.getSports());
+        System.out.println(rodrigo.getEvents());
+        System.out.println(esteban.getEvents());
     }
 }

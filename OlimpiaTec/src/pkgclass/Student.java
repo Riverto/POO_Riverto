@@ -27,13 +27,13 @@ public class Student {
     public String getId() {
         return id;
     }
-    public boolean addSport(Event sport){
+    public boolean addEvent(Event event){
         for(Event temp : this.events) {
-            if(temp.getName().equalsIgnoreCase(sport.getName())){
+            if(temp.getName().equalsIgnoreCase(event.getName())){
                 return false;
             }
         }
-        this.events.add(sport);
+        this.events.add(event);
         return true;
     }
     public boolean removeSport(Event sport){
