@@ -39,4 +39,16 @@ public class Team {
         this.events.add(event);
         return true;
     }
+    public String getStudents(){
+        String list="Students=";
+        for (Student temp : this.students) {
+            list+=temp.getStudent()+"\n";
+        }
+        list=list.substring(0, list.length()-1);
+        return list;
+    }
+    @Override
+    public String toString(){
+        return "Team="+this.name+", Students={";
+    }
 }
