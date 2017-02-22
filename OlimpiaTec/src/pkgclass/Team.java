@@ -14,9 +14,11 @@ public class Team {
     private String name;
     private ArrayList<Student> students;
     private ArrayList<Event> events;
-    public Team(String Name){
+    
+    public Team(String name){
         this.name = name;
         this.students = new ArrayList();
+        this.events = new ArrayList();
     }
     public String getName() {
         return this.name;
@@ -31,6 +33,10 @@ public class Team {
         return true;
     }
     public boolean addEvent(Event event){
+        if(events.isEmpty()){
+            this.events.add(event);
+            return true;
+        }
         for(Event temp : this.events){
             if(temp.getName().equalsIgnoreCase(event.getName())){
                 return false;
@@ -40,7 +46,7 @@ public class Team {
         return true;
     }
     public String getStudents(){
-        String list="Students={\n";
+        String list="\tStudents={\n";
         for (Student temp : this.students) {
             list+="\t"+temp.getStudent()+"\n";
         }
@@ -48,6 +54,6 @@ public class Team {
     }
     @Override
     public String toString(){
-        return "Team="+this.getName()+","+this.getStudents()+"}";
+        return "Team="+this.getName()+",\n"+this.getStudents()+"\t}";
     }
 }

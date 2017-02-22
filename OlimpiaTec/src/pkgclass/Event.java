@@ -17,7 +17,7 @@ public class Event {
     
     public Event(String name){
         this.name=name;
-        this.students=new ArrayList();
+        this.teams=new ArrayList();
     }
     public String getName() {
         return name;
@@ -32,21 +32,13 @@ public class Event {
         team.addEvent(this);
         return true;
     }
-    public boolean removeStudent(Student student){
-        for(Student temp : this.students) {
-            if(temp.getName().equalsIgnoreCase(student.getName())){
-                students.remove(temp);
-                return true;
-            }
-        } return false;
-    }
     @Override
     public String toString(){
-        String string="Event="+this.getName()+"\nAttendees={\n";
-        for (Student student : students) {
-            string+="\t Name="+student.getName()+",ID="+student.getId()+"\n";
+        String string="Event"+this.name+"{\n";
+        for (Team team : teams) {
+            string+="\t"+team.toString()+"\n";
         }
-        string += "\t }";
+        string += "}";
         return string;
     }
 }
