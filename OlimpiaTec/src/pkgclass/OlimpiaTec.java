@@ -16,8 +16,8 @@ public class OlimpiaTec {
      */
     public static void main(String[] args) {
         Student esteban = new Student("Esteban", "A00000000");
-        Sports basketball = new Sports("Basketball");
-        Sports soccer = new Sports("Soccer");
+        Event basketball = new Event("Basketball");
+        Event soccer = new Event("Soccer");
         soccer.addStudent(esteban);
         System.out.println(soccer);
         System.out.println(esteban);

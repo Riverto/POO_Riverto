@@ -14,12 +14,12 @@ import java.util.ArrayList;
 public class Student {
     private String name;
     private String id;
-    private ArrayList<Sports> sports;
+    private ArrayList<Event> events;
     
     public Student(String name, String id){
         this.name=name;
         this.id=id;
-        this.sports=new ArrayList();
+        this.events=new ArrayList();
     }
     public String getName() {
         return name;
@@ -27,26 +27,26 @@ public class Student {
     public String getId() {
         return id;
     }
-    public boolean addSport(Sports sport){
-        for(Sports temp : this.sports) {
+    public boolean addSport(Event sport){
+        for(Event temp : this.events) {
             if(temp.getName().equalsIgnoreCase(sport.getName())){
                 return false;
             }
         }
-        this.sports.add(sport);
+        this.events.add(sport);
         return true;
     }
-    public boolean removeSport(Sports sport){
-        for(Sports temp : this.sports) {
+    public boolean removeSport(Event sport){
+        for(Event temp : this.events) {
             if(temp.getName().equalsIgnoreCase(sport.getName())){
-                this.sports.remove(temp);
+                this.events.remove(temp);
             }
         }
         return false;
     }
-    public String getSports() {
-        String list="Sports=";
-        for (Sports temp : this.sports) {
+    public String getEvents() {
+        String list="Events=";
+        for (Event temp : this.events) {
             list+=temp.getName()+",";
         }
         list=list.substring(0, list.length()-1);
@@ -57,6 +57,6 @@ public class Student {
     }
     @Override
     public String toString(){
-        return "Name="+this.name+", Id="+this.id+", "+getSports();
+        return "Name="+this.name+", Id="+this.id+", "+getEvents();
     }
 }

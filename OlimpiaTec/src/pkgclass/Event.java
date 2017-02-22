@@ -11,11 +11,11 @@ import java.util.ArrayList;
  *
  * @author Riverto
  */
-public class Sports {
+public class Event {
     private String name;
     private ArrayList<Student> students;
     
-    public Sports(String name){
+    public Event(String name){
         this.name=name;
         this.students=new ArrayList();
     }
@@ -29,7 +29,7 @@ public class Sports {
             }
         }
         this.students.add(student);
-        student.addSport(this);
+        student.addEvent(this);
         return true;
     }
     public boolean removeStudent(Student student){
@@ -42,7 +42,7 @@ public class Sports {
     }
     @Override
     public String toString(){
-        String string="Sport="+this.getName()+"\nAttendees={\n";
+        String string="Event="+this.getName()+"\nAttendees={\n";
         for (Student student : students) {
             string+="\t Name="+student.getName()+",ID="+student.getId()+"\n";
         }
