@@ -30,7 +30,13 @@ public class Team {
         this.students.add(student);
         return true;
     }
-    public boolean addTeam(Team team){
-        
+    public boolean addEvent(Event event){
+        for(Event temp : this.events){
+            if(temp.getName().equalsIgnoreCase(event.getName())){
+                return false;
+            }
+        }
+        this.events.add(event);
+        return true;
     }
 }
