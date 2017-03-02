@@ -11,14 +11,16 @@ package bankbranches;
  */
 public class BankBranches {
 
-    /**
-     * @param args the command line arguments
-     */
     public static Bank testbank = new Bank();
     public static void main(String[] args) {
         testbank.addBranch("testbranch");
-        testbank.
-        
+        testbank.addCustomer("testbranch","test", 1000);
+        testbank.addTransaction("testbranch", "test", 1500);
+        testbank.getCustomers("testbranch");
+        testbank.getTransactions("testbranch", "test");
+        testbank.addTransaction("testbranch", "test", 2300);
+        testbank.addTransaction("testbranch", "test", 3400);
+        testbank.getTransactions("testbranch", "test");
     }
     
 }

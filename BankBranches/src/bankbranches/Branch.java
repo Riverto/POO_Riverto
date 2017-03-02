@@ -24,6 +24,26 @@ public class Branch {
     public String getName() {
         return name;
     }
+    public void addTransaction(String name, double amount){
+        int i = findCustomer(name);
+        if(i==-1){
+            System.out.println("Customer does not exist!");
+            return;
+        }
+        this.customers.get(i).addTransaction(amount);
+    }
+    public ArrayList<Double> getTransactions(String name) {
+        int i = findCustomer(name);
+        if(i==-1){
+            System.out.println("Customer does not exist!");
+            return null;
+        }
+        return this.customers.get(i).getTransactions();
+    }
+
+    public ArrayList<Customer> getCustomers() {
+        return customers;
+    }
     public int findCustomer(String name){
         for(Customer temp : this.customers){
             if(temp.getName().equalsIgnoreCase(name)){
