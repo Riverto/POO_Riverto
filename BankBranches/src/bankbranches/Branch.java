@@ -18,19 +18,26 @@ public class Branch {
         this.name= name;
         this.customers = new ArrayList();
     }
-    public void addCustomer(String name, double amount){
+    public boolean addCustomer(String name, double amount){
+        int i = findCustomer(name);
+        if(i==-1){
+            System.out.println("Customer already exists!");
+            return false;
+        }
         this.customers.add(new Customer(name,amount));
+        return true;
     }
     public String getName() {
         return name;
     }
-    public void addTransaction(String name, double amount){
+    public boolean addTransaction(String name, double amount){
         int i = findCustomer(name);
         if(i==-1){
             System.out.println("Customer does not exist!");
-            return;
+            return false;
         }
         this.customers.get(i).addTransaction(amount);
+        return true;
     }
     public ArrayList<Double> getTransactions(String name) {
         int i = findCustomer(name);
@@ -42,6 +49,7 @@ public class Branch {
     }
 
     public ArrayList<Customer> getCustomers() {
+        if(this.customers.isEmpty()) System.out.println("There are no customers in this branch yet");
         return customers;
     }
     public int findCustomer(String name){
