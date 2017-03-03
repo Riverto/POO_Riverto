@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="PhoneContacts">
+  <ClassDiagramComponents>
+    <Class name="Contact" package="phonecontacts" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="phoneNumber" type="long" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="long" name="phoneNumber"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getPhoneNumber" returnType="long" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="setPhoneNumber" returnType="void" visibility="public">
+          <Argument type="long" name="phoneNumber"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MobilePhone" package="phonecontacts" visibility="public" xPosition="385.0" yPosition="1.0">
+      <Fields>
+        <Field name="contacts" type="ArrayList&lt;Contact&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addContact" returnType="boolean" visibility="public">
+          <Argument type="Contact" name="contact"/>
+        </Method>
+        <Method name="addContact" returnType="boolean" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="long" name="number"/>
+        </Method>
+        <Method name="removeContact" returnType="boolean" visibility="public">
+          <Argument type="Contact" name="contact"/>
+        </Method>
+        <Method name="removeContact" returnType="boolean" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="updateContact" returnType="boolean" visibility="public">
+          <Argument type="Contact" name="contact"/>
+        </Method>
+        <Method name="updateContact" returnType="boolean" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="long" name="number"/>
+        </Method>
+        <Method name="findContact" returnType="Contact" visibility="public">
+          <Argument type="Contact" name="contact"/>
+        </Method>
+        <Method name="getContacts" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="phonecontacts.MobilePhone" target="phonecontacts.Contact" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="contacts" source="phonecontacts.MobilePhone" target="phonecontacts.Contact" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Contact&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

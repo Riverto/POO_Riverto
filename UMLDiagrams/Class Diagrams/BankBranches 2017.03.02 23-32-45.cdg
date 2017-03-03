@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="BankBranches">
+  <ClassDiagramComponents>
+    <Class name="Bank" package="bankbranches" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="branches" type="ArrayList&lt;Branch&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addBranch" returnType="boolean" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="addCustomer" returnType="boolean" visibility="public">
+          <Argument type="String" name="bName"/>
+          <Argument type="String" name="cName"/>
+          <Argument type="double" name="amount"/>
+        </Method>
+        <Method name="addTransaction" returnType="boolean" visibility="public">
+          <Argument type="String" name="bName"/>
+          <Argument type="String" name="cName"/>
+          <Argument type="double" name="amount"/>
+        </Method>
+        <Method name="getTransactions" returnType="boolean" visibility="public">
+          <Argument type="String" name="bName"/>
+          <Argument type="String" name="cName"/>
+        </Method>
+        <Method name="getCustomers" returnType="void" visibility="public">
+          <Argument type="String" name="bName"/>
+        </Method>
+        <Method name="getCustomersWithTransactions" returnType="boolean" visibility="public">
+          <Argument type="String" name="bName"/>
+        </Method>
+        <Method name="findbranch" returnType="int" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Branch" package="bankbranches" visibility="public" xPosition="497.0" yPosition="20.0">
+      <Fields>
+        <Field name="customers" type="ArrayList&lt;Customer&gt;" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addCustomer" returnType="boolean" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="double" name="amount"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="addTransaction" returnType="boolean" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="double" name="amount"/>
+        </Method>
+        <Method name="getTransactions" returnType="ArrayList&lt;Double&gt;" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getCustomers" returnType="ArrayList&lt;Customer&gt;" visibility="public"/>
+        <Method name="findCustomer" returnType="int" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Customer" package="bankbranches" visibility="public" xPosition="932.0" yPosition="49.0">
+      <Fields>
+        <Field name="transactions" type="ArrayList&lt;Double&gt;" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="double" name="initialAmount"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addTransaction" returnType="void" visibility="public">
+          <Argument type="double" name="amount"/>
+        </Method>
+        <Method name="getTransactions" returnType="ArrayList&lt;Double&gt;" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="branches" source="bankbranches.Bank" target="bankbranches.Branch" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Branch&gt;"/>
+    <HasRelation name="customers" source="bankbranches.Branch" target="bankbranches.Customer" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Customer&gt;"/>
+    <UseRelation source="bankbranches.Branch" target="bankbranches.Customer" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
