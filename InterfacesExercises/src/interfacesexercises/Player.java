@@ -9,15 +9,9 @@ package interfacesexercises;
  *
  * @author Riverto
  */
-public class ResizableCircle extends Circle implements Resizable{
-
-    public ResizableCircle(double radius) {
-        super(radius);
-    }
-
-    @Override
-    public void resize(int percent) {
-        this.radius*=1+(percent/100);
-    }
-    
+public interface Player {
+    void play();
+    void stop();
+    void pause();
+    void reverse();
 }

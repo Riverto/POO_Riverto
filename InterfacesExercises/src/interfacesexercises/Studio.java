@@ -5,19 +5,13 @@
  */
 package interfacesexercises;
 
+import java.util.List;
+import java.util.ArrayList;
+
 /**
  *
  * @author Riverto
  */
-public class ResizableCircle extends Circle implements Resizable{
-
-    public ResizableCircle(double radius) {
-        super(radius);
-    }
-
-    @Override
-    public void resize(int percent) {
-        this.radius*=1+(percent/100);
-    }
-    
+public class Studio {
+    List<Player> players = new ArrayList();
 }
