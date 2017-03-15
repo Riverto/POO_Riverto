@@ -15,6 +15,13 @@ public class HandyPerson extends Human implements Plumber,Electrician   {
     }
 
     @Override
+    public String toString() {
+        return "HandyPerson{" +super.toString()+ '}';
+    }
+
+    
+
+    @Override
     public String unplugDrain() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

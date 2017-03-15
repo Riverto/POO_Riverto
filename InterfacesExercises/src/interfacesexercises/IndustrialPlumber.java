@@ -16,6 +16,13 @@ public class IndustrialPlumber extends Human implements Plumber,Electrician{
     }
 
     @Override
+    public String toString() {
+        return "IndustrialPlumber{" +super.toString()+ '}';
+    }
+
+
+
+    @Override
     public String unplugDrain() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
