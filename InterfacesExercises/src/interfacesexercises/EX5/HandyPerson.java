@@ -3,24 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interfacesexercises;
+package interfacesexercises.EX5;
 
 /**
  *
  * @author Riverto
  */
-public class IndustrialPlumber extends Human implements Plumber,Electrician{
-
-    public IndustrialPlumber(String name) {
+public class HandyPerson extends Human implements Plumber,Electrician   {
+    public HandyPerson(String name) {
         super(name);
     }
 
     @Override
     public String toString() {
-        return "IndustrialPlumber{" +super.toString()+ '}';
+        return "HandyPerson{" +super.toString()+ '}';
     }
 
-
+    
 
     @Override
     public String unplugDrain() {

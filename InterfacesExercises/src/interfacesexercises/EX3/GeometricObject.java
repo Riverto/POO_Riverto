@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interfacesexercises;
+package interfacesexercises.EX3;
 
 /**
  *
  * @author Riverto
  */
-public interface Electrician {
-    String changeBulb();
+public interface GeometricObject {
+    double getPerimeter();
+    double getArea();
 }

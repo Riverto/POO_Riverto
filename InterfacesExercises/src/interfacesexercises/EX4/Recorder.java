@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interfacesexercises;
-
-import java.util.List;
-import java.util.ArrayList;
+package interfacesexercises.EX4;
 
 /**
  *
  * @author Riverto
  */
-public class Studio {
-    List<Player> players = new ArrayList();
+public interface Recorder extends Player{
+    void record();
 }

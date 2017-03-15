@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interfacesexercises;
+package interfacesexercises.EX1;
 
 /**
  *
  * @author Riverto
  */
-public interface Recorder extends Player{
-    void record();
+public interface Movable {
+    void moveUp();
+    void moveDown();
+    void moveLeft();
+    void moveRight();
 }

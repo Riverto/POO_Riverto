@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interfacesexercises;
+package interfacesexercises.EX4;
+
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  *
  * @author Riverto
  */
-public interface Movable {
-    void moveUp();
-    void moveDown();
-    void moveLeft();
-    void moveRight();
+public class Studio {
+    List<Player> players = new ArrayList();
 }

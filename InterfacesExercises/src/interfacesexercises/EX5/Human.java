@@ -3,21 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interfacesexercises;
+package interfacesexercises.EX5;
 
 /**
  *
  * @author Riverto
  */
-public class NobodySpecial extends Human{
-
-    public NobodySpecial(String name) {
-        super(name);
+public class Human {
+    public String name;
+    public Human(String name){
+        this.name=name;
     }
 
     @Override
     public String toString() {
-        return "NobodySpecial{" +super.toString()+ '}';
+        return "Human{" + "name=" + name + '}';
     }
     
 }

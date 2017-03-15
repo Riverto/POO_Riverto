@@ -3,31 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interfacesexercises;
+package interfacesexercises.EX5;
 
 /**
  *
  * @author Riverto
  */
-public class CDPlayer implements Player{
+public class IndustrialPlumber extends Human implements Plumber,Electrician{
+
+    public IndustrialPlumber(String name) {
+        super(name);
+    }
 
     @Override
-    public void play() {
+    public String toString() {
+        return "IndustrialPlumber{" +super.toString()+ '}';
+    }
+
+
+
+    @Override
+    public String unplugDrain() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void stop() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void pause() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void reverse() {
+    public String changeBulb() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

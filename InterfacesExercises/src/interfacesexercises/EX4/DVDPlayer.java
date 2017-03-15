@@ -3,31 +3,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interfacesexercises;
+package interfacesexercises.EX4;
 
 /**
  *
  * @author Riverto
  */
-public class HandyPerson extends Human implements Plumber,Electrician   {
-    public HandyPerson(String name) {
-        super(name);
-    }
+public class DVDPlayer implements Player {
 
     @Override
-    public String toString() {
-        return "HandyPerson{" +super.toString()+ '}';
-    }
-
-    
-
-    @Override
-    public String unplugDrain() {
+    public void play() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public String changeBulb() {
+    public void stop() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void pause() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void reverse() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

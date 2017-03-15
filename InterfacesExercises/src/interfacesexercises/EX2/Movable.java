@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interfacesexercises;
+package interfacesexercises.EX2;
 
 /**
  *
  * @author Riverto
  */
-public interface Player {
-    void play();
-    void stop();
-    void pause();
-    void reverse();
+public interface Movable {
+    void moveUp();
+    void moveDown();
+    void moveLeft();
+    void moveRight();
 }

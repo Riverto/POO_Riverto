@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interfacesexercises;
+package interfacesexercises.EX5;
 
 /**
  *
  * @author Riverto
  */
-public interface GeometricObject {
-    double getPerimeter();
-    double getArea();
+public interface Plumber {
+    String unplugDrain();
 }
