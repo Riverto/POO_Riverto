@@ -74,7 +74,7 @@ public class Team<T extends Player> implements Comparable<Team<T>>{
             } else if (this.ranking() == o.ranking()){
                 if (this.getPlayed() < o.getPlayed()){
                     return -1;
-                }    
+                } else return 1;    
             }
             return 0;
     }
